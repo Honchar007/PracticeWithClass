@@ -23,6 +23,14 @@ public:
 		cout << "The second number: " << n2 << endl;
 		cout << "The third number: " << n3 << endl;
 	}
+	void IsEqual(Numbers &n) 
+	{
+		if (n.n1 == n1 && n.n2 == n2 && n.n3 == n3) 
+			cout << "point1 and point3 are equal\n";
+		else
+			cout << "point1 and point3 are not equal\n";
+			
+	}
  };
 
 int main()
@@ -30,8 +38,11 @@ int main()
     std::cout << "Hello World!\n"; 
 	Numbers n;
 	n.set(2, 4,4);
-	
 	n.print();
-	
+	Numbers n1;
+	n1.set(2, 4, 4);
+	n1.IsEqual(n);
+	n1.set(2, 2, 2);
+	n1.IsEqual(n);
 }
-
+ 
